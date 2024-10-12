@@ -4,7 +4,7 @@
 PROGRAM = gomoku
 OBJS = gomoku.o gomoku_ai.o .libgomoku.o
 
-CC = gcc
+CC = g++
 CFLAGS = -Wall -O3 
 
 all:	$(PROGRAM)
