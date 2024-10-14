@@ -68,7 +68,7 @@ int inputPutPos(int board[][BOARD_SIZE], int which, int com) {
     if(which == com) {
         calcPutPos(board, com, &pos_x, &pos_y);
     } else {
-        printf("%s", (which == 1) ? "●" : "○");
+        printf("%s", (which == 1) ? "● " : "○ ");
         printf("の番です。どこに置きますか x y の順に入力してください\n> ");
         while(1) {
             if(fgets(buf, sizeof buf, stdin) == NULL || buf[0] == '\n')
@@ -167,10 +167,10 @@ void boardPrint(int board[][BOARD_SIZE]) {
                     printf("・");
                     break;
                 case STONE_BLACK:
-                    printf("●");
+                    printf("● ");
                     break;
                 case STONE_WHITE:
-                    printf("○");
+                    printf("○ ");
                     break;
             }
         }
