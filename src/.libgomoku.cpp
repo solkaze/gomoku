@@ -4,7 +4,7 @@
 //  http://iroha.poloa.net/ref/02_04.html
 //  https://ja.wikipedia.org/wiki/%E4%BA%94%E7%9B%AE%E4%B8%A6%E3%81%B9
 
-#include "gomoku.h"
+#include "gomoku.hpp"
 
 #include <stdbool.h>
 #include <stdio.h>
