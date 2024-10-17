@@ -13,7 +13,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdbool.h>
-#include "gomoku.h"
+#include "gomoku.hpp"
 
 int calcPutPos(int board[][BOARD_SIZE], int com, int *pos_x, int *pos_y)
 {
