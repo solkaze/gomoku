@@ -14,11 +14,12 @@ OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
 CC = g++
 CFLAGS = -Wall -O3 -I$(INCLUDE_DIR)
 
+TARGET = $(BIN_DIR)/$(PROGRAM)
 # すべてのビルドターゲット
-all: $(BIN_DIR)/$(PROGRAM)
+all: $(TARGET)
 
 # 実行ファイルの生成
-$(BIN_DIR)/$(PROGRAM): $(OBJS) | $(BIN_DIR)
+$(TARGET): $(OBJS) | $(BIN_DIR)
 	$(CC) $(OBJS) $(LDFLAGS) -o $@
 
 # オブジェクトファイルの生成ルール (buildフォルダに出力)
@@ -36,4 +37,4 @@ $(BUILD_DIR):
 # クリーンアップ
 .PHONY: clean
 clean:
-	$(RM) $(BIN_DIR)/$(PROGRAM) $(OBJS)
+	$(RM) $(TARGET) $(OBJS)
