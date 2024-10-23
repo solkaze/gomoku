@@ -34,6 +34,11 @@ $(BIN_DIR):
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 
+# 実行ターゲット
+.PHONY: run
+run: $(BIN_DIR)/$(PROGRAM)
+	$(BIN_DIR)/$(PROGRAM)
+
 # クリーンアップ
 .PHONY: clean
 clean:
