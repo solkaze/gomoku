@@ -7,7 +7,9 @@ BIN_DIR = bin
 BUILD_DIR = build
 INCLUDE_DIR = include
 
-OBJS = $(BUILD_DIR)/gomoku.o $(BUILD_DIR)/gomoku_ai.o $(BUILD_DIR)/.libgomoku.o
+# ソースファイルからオブジェクトファイルのリストを生成
+SRCS = $(wildcard $(SRC_DIR)/*.cpp)
+OBJS = $(patsubst $(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(SRCS))
 
 CC = g++
 CFLAGS = -Wall -O3 -I$(INCLUDE_DIR)
